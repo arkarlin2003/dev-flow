@@ -18,10 +18,10 @@ import { usePathname } from "next/navigation";
 const MobileNavbar = () => {
   return (
     <Sheet>
-      <SheetTrigger className="border-0">
+      <SheetTrigger className="border-0 md:hidden ">
         <IconMenu2 size={25} />
       </SheetTrigger>
-      <SheetContent side={"left"} className="bg-white dark:bg-[#212121]">
+      <SheetContent side={"left"} className="bg-white dark:bg-[#212734]">
         <SheetHeader>
           <SheetTitle>
             <Link href="/" className="flex space-x-1">
@@ -40,14 +40,14 @@ const MobileNavbar = () => {
 const NavbarContent = () => {
   const pathname = usePathname();
   return (
-    <section className="h-full flex flex-col space-y-2 mt-10">
+    <section className="h-full flex flex-col  space-y-2 mt-7">
       {sidebarLinks.map((item) => {
         const isActive = pathname === item.route;
         return (
           <SheetClose asChild key={item.route}>
             <Link
               href={item.route}
-              className={`flex p-2.5 gap-3 rounded-md hover:bg-[#FF7000]/10 hover:dark:bg-white/10 ${
+              className={`flex p-2.5 gap-3 rounded-md hover:bg-[#FF7000]/10 hover:dark:bg-[#212734] ${
                 isActive ? `bg-[#FF7000] hover:bg-[#FF7000] dark:hover:bg-[#FF7000] text-white font-bold ` : `text-black dark:text-gray-100`
               }`}
             >
@@ -66,7 +66,7 @@ const NavbarContent = () => {
         <SheetClose asChild>
           <Link
             href={"/sign-in"}
-            className="  text-[#FF7000] bg-gray-100/80 dark:bg-gray-100/10  font-bold  text-center p-2.5  rounded-md"
+            className="  text-[#FF7000] bg-gray-100/80 dark:bg-[#151821]  font-bold  text-center p-2.5  rounded-md"
           >
             Login
           </Link>
@@ -74,7 +74,7 @@ const NavbarContent = () => {
         <SheetClose asChild>
           <Link
             href={"/sign-up"}
-            className="bg-blue-100/80 dark:bg-blue-100/30 text-center font-bold  p-2.5  rounded-md"
+            className="bg-blue-100/80 dark:bg-blue-100/10 text-center font-bold  p-2.5  rounded-md"
           >
             Sign Up
           </Link>

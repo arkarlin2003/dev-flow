@@ -19,7 +19,7 @@ const Navbar = () => {
   const { setTheme } = useTheme();
 
   return (
-    <nav className="h-14 flex items-center justify-between px-7">
+    <nav className="h-14 flex items-center justify-between px-5 md:px-7 sticky top-0 bg-white dark:bg-[#212734]">
       <div>
         <Link href="/" className="flex space-x-1">
           <Image src={SiteLogo} width={25} height={25} alt="devflow" />
@@ -31,7 +31,7 @@ const Navbar = () => {
       <div className="flex items-center space-x-3">
         <Menubar>
           <MenubarMenu>
-            <MenubarTrigger className="focus:bg-light-900 dark:focus:bg-black border-0">
+            <MenubarTrigger className="focus:bg-light-900 dark:focus:bg-[#212734] border-0">
               {"light" !== "light" ? (
                 <Image
                   src={sunLogo}
@@ -50,12 +50,12 @@ const Navbar = () => {
                 />
               )}
             </MenubarTrigger>
-            <MenubarContent className="mt-2 min-w-[120px]">
+            <MenubarContent className="mt-2 min-w-[120px] border-0 dark:bg-[#212734]">
               {themes.map((theme) => (
                 <MenubarItem
                   key={theme.value}
                   onClick={() => setTheme(theme.value)}
-                  className="flex gap-3 text-gray-500 py-2 px-3 items-center cursor-pointer"
+                  className="flex gap-3 text-gray-500 py-2 px-3 items-center cursor-pointer dark:hover:bg-[#151821]/70"
                 >
                   <Image
                     src={theme.icon}
@@ -63,7 +63,7 @@ const Navbar = () => {
                     height={17}
                     alt="themeicon"
                   />
-                  <p className="text-sm">{theme.label}</p>
+                  <p className="text-sm dark:text-gray-500 ">{theme.label}</p>
                 </MenubarItem>
               ))}
             </MenubarContent>

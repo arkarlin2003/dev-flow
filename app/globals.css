@@ -74,5 +74,12 @@
   .active-theme {
     filter: invert(53%) sepia(98%) saturate(3332%) hue-rotate(0deg)
       brightness(104%) contrast(106%) !important;
+    -webkit-filter: invert(53%) sepia(98%) saturate(3332%) hue-rotate(0deg);
+  }
+  .sideImage {
+    filter: invert(59%) sepia(10%) saturate(6%) hue-rotate(30deg)
+      brightness(90%) contrast(89%) !important;
+    -webkit-filter: invert(59%) sepia(10%) saturate(6%) hue-rotate(30deg)
+      brightness(90%) contrast(89%) !important;
   }
 }
