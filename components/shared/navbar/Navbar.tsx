@@ -16,7 +16,7 @@ import { themes } from "@/constants";
 import MobileNavbar from "./MobileNavbar";
 
 const Navbar = () => {
-  const { setTheme } = useTheme();
+  const { setTheme,theme } = useTheme();
 
   return (
     <nav className="h-14 flex items-center justify-between px-5 md:px-7 sticky top-0 bg-white dark:bg-[#212734]">
@@ -32,7 +32,7 @@ const Navbar = () => {
         <Menubar>
           <MenubarMenu>
             <MenubarTrigger className="focus:bg-light-900 dark:focus:bg-[#212734] border-0">
-              {"light" !== "light" ? (
+              {theme === "light" ? (
                 <Image
                   src={sunLogo}
                   width={20}
@@ -63,7 +63,7 @@ const Navbar = () => {
                     height={17}
                     alt="themeicon"
                   />
-                  <p className="text-sm dark:text-gray-500 ">{theme.label}</p>
+                  <p className="text-sm dark:text-gray-500  ">{theme.label}</p>
                 </MenubarItem>
               ))}
             </MenubarContent>

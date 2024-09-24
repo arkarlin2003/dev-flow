@@ -11,7 +11,7 @@ import React from "react";
 const LeftSideBar = () => {
   const pathname = usePathname();
   return (
-    <section className="h-screen hidden lg:w-60 px-3 md:flex flex-col space-y-2 pt-7 dark:bg-[#212734]">
+    <section className="h-screen hidden lg:w-96 px-3 md:flex flex-col space-y-2 pt-7 dark:bg-[#212734]">
       {sidebarLinks.map((item) => {
         const isActive = pathname === item.route;
         return (
