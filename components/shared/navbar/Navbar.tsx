@@ -31,7 +31,7 @@ const Navbar = () => {
       {/* Global Search */}
       <GlobalSearchbar placeholder="Search anything globally..."/>
 
-      <div className="flex items-center space-x-3">
+      <div className="flex items-center space-x-2 md:space-x-3">
         <Menubar>
           <MenubarMenu>
             <MenubarTrigger className="focus:bg-light-900 dark:focus:bg-[#212734] border-0">
