@@ -13,7 +13,7 @@ const layout = ({ children }: Props) => {
       <Navbar />
       <div className="flex w-full">
         <LeftSideBar />
-        <div className="w-full h-screen p-3 bg-gray-100 dark:bg-[#151821]">
+        <div className="w-full h-screen p-7 bg-[#FCFCFC] dark:bg-[#151821]">
         {children}
         </div>
         <RightSidebar/>

@@ -14,20 +14,23 @@ import {
 } from "@/components/ui/menubar";
 import { themes } from "@/constants";
 import MobileNavbar from "./MobileNavbar";
+import GlobalSearchbar from "../search/GlobalSearchbar";
 
 const Navbar = () => {
   const { setTheme,theme } = useTheme();
 
   return (
-    <nav className="h-14 flex items-center justify-between px-5 md:px-7 sticky top-0 bg-white dark:bg-[#212734]">
+    <nav className="h-20 flex max-md:gap-4 items-center justify-between px-5 md:px-7 sticky top-0 bg-white dark:bg-[#212734]">
       <div>
         <Link href="/" className="flex space-x-1">
-          <Image src={SiteLogo} width={25} height={25} alt="devflow" />
-          <p className="text-xl font-extrabold">Dev</p>
-          <p className="text-xl font-extrabold text-[#FF7000]">Overflow</p>
+          <Image src={SiteLogo} width={28} height={28} alt="devflow" />
+          <p className="text-xl hidden md:block font-extrabold">Dev</p>
+          <p className="text-xl hidden md:block font-extrabold text-[#FF7000]">Overflow</p>
         </Link>
       </div>
       {/* Global Search */}
+      <GlobalSearchbar placeholder="Search anything globally..."/>
+
       <div className="flex items-center space-x-3">
         <Menubar>
           <MenubarMenu>
