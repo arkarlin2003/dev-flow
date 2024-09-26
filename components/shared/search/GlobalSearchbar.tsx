@@ -18,7 +18,7 @@ const GlobalSearchbar = ({
     <div
       className={`flex items-center ${
         iconPosition === "right" && " flex-row-reverse"
-      } w-[600px] gap-2 p-1.5 px-4 rounded-xl bg-gray-100 dark:bg-[#101012]/20 `}
+      } w-[250px] md:w-[600px] gap-2 p-1.5 px-4 rounded-lg bg-gray-100 dark:bg-[#101012]/20 `}
     >
       <Image src={icon} width={22} height={22} alt="searchicon" />
       <Input
