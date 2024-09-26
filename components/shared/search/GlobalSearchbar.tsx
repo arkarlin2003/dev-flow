@@ -23,7 +23,7 @@ const GlobalSearchbar = ({
       <Image src={icon} width={22} height={22} alt="searchicon" />
       <Input
         value=""
-        className="border-0 placeholder:text-gray-400"
+        className="border-0 bg-transparent placeholder:text-gray-400"
         placeholder={placeholder}
       />
     </div>
