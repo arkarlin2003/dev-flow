@@ -9,7 +9,7 @@ type Props = {
 
 const layout = ({ children }: Props) => {
   return (
-    <div className="w-full">
+    <div className="w-full 2xl:max-w-6xl mx-auto">
       <Navbar />
       <div className="flex w-full">
         <LeftSideBar />
